@@ -2,14 +2,13 @@ import urllib.request
 import pandas as pd
 import seaborn as sns
 import matplotlib as mpl
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt https://github.com/Faradezo/trilha_1/blob/main/.github/workflows/documentoTeste.txt
 import nltk
 import string
 
 texto = []
 
-f = open(r'C:\Users\farad\Downloads\documentoTeste.txt', encoding = "utf-8")    # para arquivos locais
-for line in f:
+for line in urllib.request.urlopen('http://meusite.mackenzie.br/rogerio/kate_beckinsale.txt', encoding = 'utf-8'): 
     texto.append(line)
 
 nltk.download('stopwords')                              # baixa arquivo com as stopwords
